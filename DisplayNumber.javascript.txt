@@ -1,0 +1,22 @@
+﻿<!Doctype html>
+<html>
+<body>
+<script>
+
+var num=50;
+for(var i=1;i<=num;i++)
+{
+       if(i%2==0)
+   {
+       document.write("Number= "+num+ is even)
+       }
+else
+   {
+document.write("Number= "+num+ is odd)
+   }
+
+}
+
+</script>
+</body>
+</html>
