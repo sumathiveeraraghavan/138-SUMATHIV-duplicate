@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align: center;">
+    <textarea id="inputField" rows=10 cols="60">
+    </textarea>
+    <br><br>
+ 
+    <button onclick="countWords()">
+        Count Words
+    </button>
+<button onclick="wordcout()">
+        Letter Words
+    </button>
+
+    <br><br>    
+<p> Word Count:
+        <span id="show">0</span>
+    </p>
+ 
+<p> Letter Count:
+        <span id="ltr">0</span>
+    </p>
+    <script>
+        function countWords() {
+            var text = document
+                .getElementById("inputField").value;
+            var numWords = 0;
+            for (var i = 0; i < text.length; i++) {
+                var currentCharacter = text[i];
+                if (currentCharacter == " ") {
+                    numWords += 1;
+                }
+            }
+            numWords += 1;
+            document.getElementById("show")
+                .innerHTML = numWords;
+        }
+
+function wordcout(){
+var text = document
+                .getElementById("inputField").value;
+var strcount = text.replace(/[^A-Z]/gi, "").length;
+document.getElementById("ltr")
+                .innerHTML = strcount;
+}
+    </script>
+</body>
+ 
+</html>
+
+
